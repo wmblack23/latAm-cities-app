@@ -6,13 +6,13 @@ import os
 
 load_dotenv()
 
-application = Flask(__name__)
-CORS(application)
-
 # Connect to Mongo
 clusterUrl = os.environ["clusterUrl"]
 client = MongoClient(clusterUrl)
 db = client['latAm-app']
+
+application = Flask(__name__)
+CORS(application)
 
 @application.route("/", methods=["GET"])
 def index():
