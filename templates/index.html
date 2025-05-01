@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Latin American City Exploration</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
 <body>
-    <form method="GET" class="search-bar" id="city-search-bar">
-        <input type="search" name="search" placeholder="Start Typing a Latin American City" required>
-    </form>
+    <main class="main-content">
+        <form method="GET" class="search-bar" id="city-search-bar">
+            <input type="search" name="search" placeholder="Start Typing a Latin American City" autocomplete="off" required>
+        </form>
+    </main>
 </body>
 </html>
